@@ -1,0 +1,6 @@
+name: print hello world
+event: 
+      push (main)
+
+Job:
+    print("hello world")
