@@ -1,5 +1,6 @@
 name: print hello world
-on: [push]
+on: push:
+    pull request:
 jobs:
     say hello:
     runs on: ubutu latest
@@ -7,3 +8,6 @@ jobs:
     steps:
     -name: print hello world
     run: echo "hello world"
+
+    -name: print event name
+    run: echo "This event is: ${{ github.event_name }}"
