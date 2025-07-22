@@ -1,13 +1,19 @@
-name: print hello world
-on: push:
-    pull request:
-jobs:
-    say hello:
-    runs on: ubutu latest
-    
-    steps:
-    -name: print hello world
-    run: echo "hello world"
+name: Hello World
 
-    -name: print event name
-    run: echo "This event is: ${{ github.event_name }}"
+on:
+  push:
+  pull_request:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 👋 Say Hello
+        run: echo "Hello, World!"
+      
+      - name: 📣 Print GitHub Event Name
+        run: echo "This event is: ${{ github.event_name }}"
