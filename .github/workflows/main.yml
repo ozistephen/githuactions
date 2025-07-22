@@ -9,11 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ✅ Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 👋 Say Hello
+      - name: Say Hello
         run: echo "Hello, World!"
 
-      - name: 📣 Print GitHub Event Name
+      - name: Show event name
         run: echo "This event is: ${{ github.event_name }}"
+
+      - name: List repo files
+        run: ls -la
