@@ -14,6 +14,6 @@ jobs:
 
       - name: 👋 Say Hello
         run: echo "Hello, World!"
-      
+
       - name: 📣 Print GitHub Event Name
         run: echo "This event is: ${{ github.event_name }}"
